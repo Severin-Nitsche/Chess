@@ -7,6 +7,10 @@ public class Board {
 
   private final Piece[] board = new Piece[64];
 
+  public Piece gp(int i) {
+    return board[i];
+  }
+
   public IntFunction<Piece> get(char file) {
     return rank -> board[(rank-1)*8+file-'a'];
   }
