@@ -1,5 +1,5 @@
 module com.github.severinnitsche.Chess {
-   //requires transitive com.github.severinnitsche.FantasyLand;
+   requires transitive com.github.severinnitsche.AlgebraicDataTypes;
 
    exports com.github.severinnitsche.chess;
    //exports com.github.severinnitsche.chess.bots;
