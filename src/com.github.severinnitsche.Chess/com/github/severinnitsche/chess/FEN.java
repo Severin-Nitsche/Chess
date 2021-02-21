@@ -12,12 +12,13 @@ public record FEN(Board placement, boolean white, boolean K, boolean Q, boolean 
   public List<Turn> generateMoves() {
     //generate moves
     var moves = placement.indices().mapToObj(i -> i).reduce((List<Turn>)List.<Turn>Nil(), (list, index) -> index == -1 ? list : generateMoves(list,index), (smøl,big) -> smøl.concat(big));
-    //verify moves
+    //TODO: verify moves
 
     return moves;
   }
 
   public List<Turn> generateMoves(List<Turn> base, int index) {
+    //TODO: append moves for set piece
     /*final var piece = board.gp(i);
     if(piece instanceof Piece.Pawn pawn)
 
